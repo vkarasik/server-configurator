@@ -58,9 +58,11 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
   document.querySelector('textarea').addEventListener('input', autoGrow);
 
-  document.querySelectorAll('.modal__close').forEach(function (i) {
-    i.addEventListener('click', hideModal);
-  });
+  // Because of IE and old browsers
+  var closeButtons = document.querySelectorAll('.modal__close');
+  for (i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].addEventListener('click', hideModal);
+  }
 
   document.querySelector('.components').addEventListener('click', function (e) {
     if (e.target.className === 'components__item-select-icon') {
