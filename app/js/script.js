@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
     if (curComponent !== 'base' && swichState) {
       if (currentConfig['base'][0] == undefined) {
-        alert('В режиме совместимости сначала выберите платформу.');
+        alert('Сначала выберите платформу. Или отключите режим совместимости компонентов.');
         return;
       }
       var filter = currentConfig['base'][0][curComponent]; // get condition for MYSQL WHERE clause
