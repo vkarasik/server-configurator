@@ -1,0 +1,98 @@
+.button {
+    padding: 10px 10px 10px 40px;
+    background-color: @color-blue;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    color: @color-gray-light;
+    cursor: pointer;
+
+    &_save {
+        background-image: url('../img/icon_save.svg');
+    }
+
+    &_copy {
+        background-image: url('../img/icon_copy.svg');
+    }
+
+    &_plane {
+        background-image: url('../img/icon_plane.svg');
+    }
+
+    &_login {
+        background-image: url('../../img/icon_login.svg');
+    }
+
+    &_add,
+    &_insert {
+        background-image: url('../../img/icon_add-linear-white.svg');
+        background-color: @color-green;
+
+        &:hover {
+            background-color: darken(@color-green, 5%) !important;
+        }
+
+    }
+
+
+    &:hover {
+        background-color: darken(@color-blue, 5%);
+    }
+
+    &-inner {
+        // text-align: right;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+form {
+    width: 100%;
+
+    &.auth {
+        width: 300px;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    input {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid @color-gray-middle;
+        border-radius: 3px;
+        margin-bottom: 12px;
+        font-family: 'Open Sans';
+        font-size: 140%;
+        font-weight: 400;
+        color: @color-gray-deep;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 80px;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid @color-gray-middle;
+        border-radius: 3px;
+        margin-bottom: 12px;
+        font-family: 'Open Sans';
+        font-size: 140%;
+        font-weight: 400;
+        color: @color-gray-deep;
+        resize: none;
+        overflow: hidden;
+    }
+
+    .sent {
+        margin-top: 15px;
+    }
+}
